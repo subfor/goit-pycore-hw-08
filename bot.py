@@ -133,7 +133,6 @@ def main():
 
         match command:
             case "close" | "exit":
-                book.save()
                 break
             case "hello":
                 print("How can I help you?")
@@ -159,8 +158,8 @@ def main():
                     print(message)
             case _:
                 print("Invalid command.")
-    print("📁 Address book saved. Bye!")
     book.save()
+    print("📁 Address book saved. Bye!")
 
 
 if __name__ == "__main__":
